@@ -1,0 +1,23 @@
+.file-upload-wrapper {
+    position: relative;
+    padding: 15px 0;
+}
+
+.file-upload-wrapper input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    opacity: 1;
+    transform: scale(.85) translateY(-.9rem) translateX(0.15rem);
+}
+
+.flatpickr-input {
+    background-color: #fff !important;
+}

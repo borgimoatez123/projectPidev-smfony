@@ -1,0 +1,229 @@
+// Top Bar Styles
+.top-bar {
+  background-color: $primary;
+  padding: 0.5rem 0;
+  color: $white;
+  font-size: 0.9rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-info {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba($white, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $white;
+        color: $primary;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Navigation Bar Styles
+.navbar {
+  padding: 1rem 0;
+  background-color: $white;
+  box-shadow: 0 2px 15px rgba($dark, 0.1);
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin: 0 0.5rem;
+
+      .nav-link {
+        color: $dark;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary;
+        }
+
+        &.active {
+          color: $primary;
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $primary;
+          }
+        }
+      }
+
+      &.dropdown {
+        .dropdown-menu {
+          border: none;
+          box-shadow: 0 2px 15px rgba($dark, 0.1);
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+
+          .dropdown-item {
+            padding: 0.5rem 1rem;
+            color: $dark;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: rgba($primary, 0.1);
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .search-icon {
+    color: $dark;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// Search Modal Styles
+.search-modal {
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    background-color: rgba($white, 0.95);
+  }
+
+  .modal-header {
+    border: none;
+    padding: 1.5rem;
+
+    .close {
+      font-size: 1.5rem;
+      color: $dark;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 2rem;
+
+    .search-form {
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 2px solid rgba($dark, 0.1);
+        border-radius: 50px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border-color: $primary;
+          box-shadow: none;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: $primary;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Responsive Adjustments
+@include media-breakpoint-down(lg) {
+  .top-bar {
+    .container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .navbar {
+    .navbar-nav {
+      .nav-item {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .top-bar {
+    .contact-info {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+} 

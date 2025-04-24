@@ -1,0 +1,106 @@
+// Import variables and base styles
+@import 'variables';
+@import 'base';
+@import 'header';
+
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom styles
+.container {
+  max-width: map-get($container-max-widths, xl);
+  margin: 0 auto;
+  padding: 0 $spacer;
+}
+
+// Header styles
+.page-header {
+  background-color: $primary;
+  color: $white;
+  padding: 100px 0;
+  margin-bottom: 50px;
+  text-align: center;
+
+  h1 {
+    color: $white;
+    margin-bottom: $spacer;
+  }
+
+  .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    .breadcrumb-item {
+      color: $white;
+      
+      a {
+        color: $white;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      &.active {
+        color: rgba($white, 0.7);
+      }
+    }
+  }
+}
+
+// Service item styles
+.service-item {
+  background: $white;
+  padding: $spacer * 2;
+  border-radius: $border-radius;
+  box-shadow: 0 0 15px rgba($dark, 0.1);
+  transition: $transition-base;
+  margin-bottom: $spacer * 2;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba($dark, 0.2);
+  }
+
+  i {
+    font-size: 2.5rem;
+    color: $primary;
+    margin-bottom: $spacer;
+  }
+
+  h3 {
+    margin-bottom: $spacer;
+  }
+
+  p {
+    color: $gray-600;
+  }
+}
+
+// Responsive adjustments
+@include media-breakpoint-down(md) {
+  .page-header {
+    padding: 60px 0;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .service-item {
+    padding: $spacer;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .page-header {
+    padding: 40px 0;
+  }
+  
+  .service-item {
+    padding: $spacer;
+  }
+} 

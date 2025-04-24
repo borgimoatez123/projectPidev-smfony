@@ -1,0 +1,70 @@
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import custom variables
+@import "variables";
+
+// Import custom styles
+@import "base";
+@import "components";
+@import "layout";
+@import "pages";
+@import "utilities";
+
+// Import Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Import Animate.css
+@import "~animate.css/animate.min.css";
+
+// Import Owl Carousel
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+
+// Custom variables
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Custom styles
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $dark;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-item {
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.footer {
+    background-color: $dark;
+    color: $light;
+    padding: 3rem 0;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+} 

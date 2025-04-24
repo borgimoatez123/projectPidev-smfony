@@ -1,0 +1,102 @@
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $dark;
+  background-color: $light;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $spacer;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: $spacer;
+}
+
+// Links
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: $transition-base;
+
+  &:hover {
+    color: darken($primary, 15%);
+    text-decoration: none;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: $spacer;
+  padding-left: 2rem;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Forms
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Buttons
+button {
+  cursor: pointer;
+}
+
+// Tables
+table {
+  width: 100%;
+  margin-bottom: $spacer;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: $spacer * 0.5;
+  border: 1px solid $secondary;
+}
+
+// Utilities
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.mt-1 { margin-top: $spacer * 0.25; }
+.mt-2 { margin-top: $spacer * 0.5; }
+.mt-3 { margin-top: $spacer; }
+.mt-4 { margin-top: $spacer * 1.5; }
+.mt-5 { margin-top: $spacer * 3; }
+
+.mb-1 { margin-bottom: $spacer * 0.25; }
+.mb-2 { margin-bottom: $spacer * 0.5; }
+.mb-3 { margin-bottom: $spacer; }
+.mb-4 { margin-bottom: $spacer * 1.5; }
+.mb-5 { margin-bottom: $spacer * 3; } 
