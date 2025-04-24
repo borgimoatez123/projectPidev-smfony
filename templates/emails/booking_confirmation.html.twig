@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h2 style="color: #2B547E;">Booking Confirmed! 🎉</h2>
+    <p>Hello {{ booking.userName }},</p>
+    <p>Your booking <strong>#{{ booking.id }}</strong> has been successfully confirmed.</p>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa;">
+        <h3 style="margin-top: 0;">Booking Details:</h3>
+        <p>📅 Date: {{ booking.bookingDate|date('F j, Y H:i') }}</p>
+        <p>💰 Total Price: ${{ booking.priceTotal }}</p>
+    </div>
+    
+    <p>Best regards,<br>The MeetNtrip Team</p>
+</body>
+</html>

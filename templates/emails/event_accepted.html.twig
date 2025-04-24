@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { font-size: 24px; color: #333; margin-bottom: 20px; }
+        .content { font-family: Arial, sans-serif; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Event Approved ✔️</div>
+        <div class="content">
+            <p>Dear {{ event.user.email }},</p>  <!-- Changed username to email -->
+            <p>Your event <strong>{{ event.nom }}</strong> has been approved!</p>
+            <p>Event Details:</p>
+            <ul>
+                <li>Type: {{ event.type }}</li>
+                <li>Location: {{ event.lieuEvenement }}</li>
+                <li>Dates: {{ event.dateDebut|date('M j, Y') }} to {{ event.dateFin|date('M j, Y') }}</li>
+            </ul>
+            <p>View your event: <a href="{{ url('app_home') }}">Click here</a></p>
+        </div>
+    </div>
+</body>
+</html>

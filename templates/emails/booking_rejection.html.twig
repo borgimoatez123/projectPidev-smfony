@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Rejection</title>
+</head>
+<body>
+    <h2 style="color: #dc3545;">Booking Rejected</h2>
+    <p>Hello {{ booking.userName }},</p>
+    <p>We regret to inform you that your booking <strong>#{{ booking.id }}</strong> has been rejected.</p>
+    
+    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa;">
+        <h3 style="margin-top: 0;">Booking Details:</h3>
+        <p>📅 Date: {{ booking.bookingDate|date('F j, Y H:i') }}</p>
+        <p>💰 Total Price: ${{ booking.priceTotal }}</p>
+    </div>
+    
+    <p>Please contact support if you have any questions.</p>
+    <p>Best regards,<br>The MeetNtrip Team</p>
+</body>
+</html>
